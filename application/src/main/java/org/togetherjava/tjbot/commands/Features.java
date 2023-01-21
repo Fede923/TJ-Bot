@@ -2,10 +2,7 @@ package org.togetherjava.tjbot.commands;
 
 import net.dv8tion.jda.api.JDA;
 
-import org.togetherjava.tjbot.commands.basic.PingCommand;
-import org.togetherjava.tjbot.commands.basic.RoleSelectCommand;
-import org.togetherjava.tjbot.commands.basic.SuggestionsUpDownVoter;
-import org.togetherjava.tjbot.commands.basic.VcActivityCommand;
+import org.togetherjava.tjbot.commands.basic.*;
 import org.togetherjava.tjbot.commands.code.CodeMessageAutoDetection;
 import org.togetherjava.tjbot.commands.code.CodeMessageHandler;
 import org.togetherjava.tjbot.commands.code.CodeMessageManualDetection;
@@ -139,6 +136,7 @@ public class Features {
         features.add(new ModMailCommand(jda, config));
         features.add(new HelpThreadCommand(config, helpSystemHelper));
         features.add(new ReportCommand(config));
+        features.add(new DaysCommand());
 
         // Mixtures
         features.add(new HelpThreadOverviewUpdater(config, helpSystemHelper));
